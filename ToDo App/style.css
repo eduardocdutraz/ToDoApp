@@ -1,0 +1,128 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-app {
+    width: min(90%, 600px);
+    padding: 20px 30px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app-header {
+    color: #0c4a6e;
+    padding-bottom: 20px;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.todo-app-input-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.todo-app-input-form input {
+    width: 100%;
+    padding: 10px 20px;
+    border: 2px solid #0c4a6e;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1.25rem;
+    transition: border-color 0.3s;
+}
+
+.todo-app-input-form input:focus {
+    border-color: #3b82f6;
+}
+
+.add-task-btn, .remove-completed-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0c4a6e;
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.add-task-btn:hover, .remove-completed-btn:hover {
+    background-color: #3b82f6;
+}
+
+.todo-app-list {
+    width: 100%;
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.todo-app-list .task {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0c4a6e;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #e5f4ff;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.todo-app-list .task.completed {
+    background-color: #c3e0ff;
+    text-decoration: line-through;
+    color: #737373;
+}
+
+.todo-app-list .container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todo-app-list .circle {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #0c4a6e;
+    border-radius: 50%;
+    background-color: #ffffff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.todo-app-list .task.completed .circle {
+    background-color: #0c4a6e;
+}
+
+.todo-app-list .close-icon {
+    color: #ff6b6b;
+    cursor: pointer;
+    z-index: 9;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.todo-app-list .close-icon:hover {
+    color: #ff4b4b;
+}
